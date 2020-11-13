@@ -4,14 +4,14 @@ const props = {
     temp: null
 };
 
-const login = (props) => {
+const loginCenter = (props) => {
 
     return (
        <>
-            <h3>Login</h3>
+            <h3>Login center</h3>
        </>
     );
 };
 
 
-export default login;
+export default loginCenter;
