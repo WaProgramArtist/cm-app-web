@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+// import Routes from './routes';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+
+import actions from './actions';
 
 function App() {
+  const selectors = useSelector((state) => state);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(
+      actions.exampleSetValueAction({
+        id: 'TEST001',
+        name: 'TEST',
+        score: 100,
+        birth: null,
+      })
+    );
+
+    console.log('State --> ', selectors.exampleReducer);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div></div>
   );
 }
 
