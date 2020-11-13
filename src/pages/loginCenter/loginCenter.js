@@ -1,5 +1,6 @@
 import React from 'react';
 
+// import {HeaderTop} from './loginStyle'
 const props = {
     temp: null
 };
