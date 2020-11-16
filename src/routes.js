@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from './pages/index';
 import { TemplatePage01 } from './pages/pageTemplate/';
-import loginCenter from './pages/loginCenter/loginCenter';
+import { ListLogin } from './pages/loginCenter/';
 import mariMobileNumber from './pages/mariMobileNumber/mariMobileNumber';
 import unbarSMS from './pages/unbarSMS/unbarSMS';
 // import NotFound from './components/not-found';
@@ -43,7 +43,7 @@ const Routes = () => {
                                     <SideNavMenu>
                                         <ui>
                                             <li>
-                                                <CustomLink to="/login-center">Login Center</CustomLink>
+                                                <CustomLink to="/list-login">List login</CustomLink>
                                             </li>
                                         </ui>
 
@@ -60,6 +60,9 @@ const Routes = () => {
                 <div>
                     <AppContaintBody>
                         <Switch>
+                            <Route exact path='/'>
+                                <ListLogin menu={'Login Center'} title={'Show Login & Password'}/>
+                            </Route>
                             <Route exact path='/login-center'>
                                 <loginCenter/>
                             </Route>
@@ -68,9 +71,6 @@ const Routes = () => {
                             </Route>
                             <Route exact path='/unbar-sms'>
                                 <unbarSMS/>
-                            </Route>
-                            <Route exact path='/'>
-                                <TemplatePage01 title={'TemplatePage01'}/>
                             </Route>
                             {/* <Route name="NotFoundPage" component={NotFound} /> */}
                         </Switch>

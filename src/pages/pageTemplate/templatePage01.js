@@ -54,9 +54,12 @@ const TemplateBodyColumn = styled.div`
 
 const TemplateContaintHeader = styled.div`
     padding: 5px 15px 5px 15px;
+    font-size: 28px;
+    font-weight: bold;
     text-align: center;
     background-color: red;
     margin: 0 0 1px 0;
+    border-bottom: solid 2px #B2BABB;
 `;
 
 const TemplateContaintLeft = styled.div`
