@@ -4,14 +4,14 @@ const props = {
     temp: null
 };
 
-const login = (props) => {
+const Home = (props) => {
 
     return (
        <>
-            <h3>Login</h3>
+            <h3>Home</h3>
        </>
     );
 };
 
 
-export default login;
+export default Home;

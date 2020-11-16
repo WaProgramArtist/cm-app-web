@@ -1,14 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 //import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 
-import actions from './actions';
-
 import Routes from './routes';
+// import actions from './actions';
 
 function App() {
+  // const [stateOpen, setStateOpen] = useState(true);
   // const selectors = useSelector((state) => state);
   // const dispatch = useDispatch();
+
+  // const onOpen = () => {
+  //   setStateOpen(!stateOpen);
+  //   console.log('State >>> ', stateOpen);
+  // }
 
   useEffect(() => {
     // dispatch(
@@ -26,6 +31,7 @@ function App() {
   return (
     <>
       <Routes />
+      {/* <button onClick={() => onOpen()}>Click me</button> */}
     </>
   );
 }
