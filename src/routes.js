@@ -4,8 +4,9 @@ import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-do
 import login from './pages/index';
 import loginCenter from './pages/loginCenter/loginCenter';
 import mariMobileNumber from './pages/mariMobileNumber/mariMobileNumber';
-import unbarSMS from './pages/unbarSMS/unbarSMS';
+import unbarSMS from './pages/unbarSMS';
 // import NotFound from './components/not-found';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Routes = () => {
     return (
@@ -14,7 +15,7 @@ const Routes = () => {
                 <Route exact path='/' component={login} />
                 <Route exact path='/login-center' component={loginCenter} />
                 <Route exact path='/mari-mobile-number' component={mariMobileNumber} />
-                <Route exact path='/unbar-sms' component={unbarSMS} />
+                <Route path='/unbar-sms' component={unbarSMS} />
                 {/* <Route exact path="/job" component={Jobs} /> */}
                 {/* <Route name="NotFoundPage" component={NotFound} /> */}
                 {/* <Route path='/job' component={} />
