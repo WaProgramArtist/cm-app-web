@@ -1,12 +1,12 @@
-import React , { useRef } from 'react';
+import React , { useRef , useState } from 'react';
 import { useSelector , useDispatch } from 'react-redux';
 import { SearchCriteriaBox , DivInBlock } from './UnbarSmsStyle';
 import PropTypes from 'prop-types';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import { Form , Button , Modal } from 'react-bootstrap';
+import { Form , Button } from 'react-bootstrap';
 import * as UnBanSMSactions from '../../actions/UnBanSMS/UnBanSMSactions';
-import { UnbanSMSInTableMobile , UnbanSMSActionAddModal } from './components';
+import { UnbanSMSInTableMobile , UnbanSMSActionAddModal , PaginationHandler } from './components';
 
 const props = {
     temp: null
@@ -58,6 +58,11 @@ const UnbarSMS = (props) => {
             }
         }
     }
+
+    const [currentPage, setCurrentPage] = useState(1);
+    const [showLimit, setShowLimit] = useState(15);
+    const [limitPage, setLimitPage] = useState(14);
+    const ActionPaginationHandlerOnClick = (page) => { setCurrentPage(page); };
 
     return (
        <div>
@@ -145,6 +150,7 @@ const UnbarSMS = (props) => {
                                 </tbody>
                             </table>
                             {checkedDataList.join(' , ')}
+                            <PaginationHandler currentPage={currentPage} showLimit={showLimit} limitPage={limitPage} handlerOnClick={ActionPaginationHandlerOnClick} />
                         </div>
                     </div>
                 </div>
