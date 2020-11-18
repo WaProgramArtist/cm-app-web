@@ -32,7 +32,7 @@ const PaginationHandler = ({
             if(r_startPage() - ((limitPage - temp_r_end)*(-1)) > 0){
                 shiftLeft = (cal_r_startPage - ((limitPage - temp_r_end)*(-1)));
             }else{
-                shiftLeft = 0;
+                shiftLeft = 1;
             }
             return limitPage;
         }else{
