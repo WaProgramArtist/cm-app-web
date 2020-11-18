@@ -3,11 +3,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Pagination } from 'react-bootstrap';
 
-const PaginationHandler = (props) => {
-
-    const currentPage = parseInt(props.currentPage);
-    const showLimit = parseInt(props.showLimit);
-    const limitPage = parseInt(props.limitPage);
+const PaginationHandler = ({
+        currentPage = 1,
+        showLimit,
+        limitPage,
+        handlerOnClick,
+    }) => {
+    
+    currentPage = parseInt(currentPage);
+    showLimit = parseInt(showLimit);
+    limitPage = parseInt(limitPage);
 
     const r_startPage = () => { 
         let temp = parseInt(currentPage - Math.floor(showLimit /  2 ));
@@ -38,7 +43,7 @@ const PaginationHandler = (props) => {
     const r_currentPage = currentPage > 0 ? parseInt(currentPage) : 1;
     
     const ActionOnClick = (key) => {
-        props.handlerOnClick(parseInt(key));
+        handlerOnClick(parseInt(key));
     }
 
     const cal_r_endPage = r_endPage();

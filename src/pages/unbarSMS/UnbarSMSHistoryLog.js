@@ -47,12 +47,7 @@ const UnbarSMSHistoryLog = (props) => {
                 </div>
                 <div className="row">
                     <div className="col-sm-12">
-                        <DivInBlock>
-                            <span style={{float:'right'}}>
-                                <Button variant="primary" size="sm" block>EDIT MODE</Button>
-                            </span>
-                        </DivInBlock>
-                        <div>
+                        <div className="mt-2">
                             <table className="table table-bordered" style={{width: '100%' , fontSize: '12px'}}>
                                 <thead>
                                     <tr>
