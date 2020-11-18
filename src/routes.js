@@ -11,7 +11,7 @@ import Home from './pages/index';
 import { TemplatePage01 } from './pages/pageTemplate/';
 import { ListLogin } from './pages/loginCenter/';
 import mariMobileNumber from './pages/mariMobileNumber/mariMobileNumber';
-import unbarSMS from './pages/unbarSMS/unbarSMS';
+import unbarSMS from './pages/unbarSMS';
 // import NotFound from './components/not-found';
 const Routes = () => {
     const [openMenu, setOpenMenu] = useState(false);
